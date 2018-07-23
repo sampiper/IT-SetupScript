@@ -6,7 +6,7 @@ This will install Apps and macOS tweaks that we use the most at Solstice.
 
 Open Terminal, type this and press enter:
 
-/usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/bmoyano2706/SetupScript/master/setupScript.py)"
+/usr/bin/python -c "$(curl -fsSL https://raw.githubusercontent.com/SolsticeConsulting/IT-SetupScript/master/setupScript.py)"
 
 Follow the instructions that appear on the screen and you'll be ready to go.
 
