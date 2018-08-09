@@ -28,7 +28,7 @@ print "\n\nWelcome to the Mac Setup Script by TAB\n"
 
 # Basic Info
 while name == '':
-  name = raw_input("What's your name and surname?\n").strip()
+  name = raw_input("What's your first name and surname?\n").strip()
 
 #while email == '' or '@' not in email:
 #  email = raw_input("What's your email?\n").strip()
@@ -42,7 +42,7 @@ def show_notification(text):
   
 urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
 os.system('chmod +x create-user.sh')
-subprocess.call(shlex.split('sudo ./create-user.sh ' + name + ' Welcome2tab! ' + name.replace(' ', '')))
+subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
 
 
 
