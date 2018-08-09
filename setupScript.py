@@ -41,6 +41,7 @@ def show_notification(text):
   os.system('osascript -e \'display notification "'+ text +'" with title "Mac Setup"\' > /dev/null')
   
 urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
+os.system('chmod 744')
 subprocess.call(shlex.split('sudo ./create-user.sh name Welcome2tab! test)
 
 
