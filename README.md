@@ -14,19 +14,14 @@ Software:
 
 * Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
 * Essential Quicklook plugins 
-
-• Google Chrome 
-
-• Slack 
-
-• Zoom
-
-• Adobe Acrobat Reader 
-
-• Google Backup and Sync
+* Google Chrome 
+* Slack 
+* Zoom
+* Adobe Acrobat Reader 
+* Google Backup and Sync
 
 App Store apps: 
-• Keynote
+* Keynote
 
 Tweaks: 
-• Disabling the startup sound Google Chrome default browser
+* Disabling the startup sound Google Chrome default browser
