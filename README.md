@@ -1,8 +1,8 @@
 # IT-SetupScript
 
-Solstice Mac Setup
+TAB Mac Setup
 
-This will install Apps and macOS tweaks that we use the most at Solstice.
+This will install Apps and macOS tweaks that we use the most at TAB.
 
 Open Terminal, type this and press enter:
 
@@ -10,12 +10,17 @@ Open Terminal, type this and press enter:
 
 Follow the instructions that appear on the screen and you'll be ready to go.
 
-Software: Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) Essential Quicklook plugins Google Chrome Slack Zoom Adobe Acrobat Reader Google BackUp and Sync
+Software: 
+• Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
+• Essential Quicklook plugins 
+• Google Chrome 
+• Slack 
+• Zoom
+• Adobe Acrobat Reader 
+• Google Backup and Sync
 
-Appstore apps: Keynote
+App Store apps: 
+• Keynote
 
-Tools: Spectacle The-Unarchiver
-
-Tweaks: Disabling the startup sound Google Chrome default browser
-
-Solstice We prove what humanity is capable of
+Tweaks: 
+• Disabling the startup sound Google Chrome default browser
