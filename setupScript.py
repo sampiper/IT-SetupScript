@@ -3,6 +3,7 @@
 
 import os
 import json
+import urllib
 import urllib2
 import subprocess
 import shlex
@@ -39,7 +40,7 @@ while assettag ==  '' or 'TABLT' not in assettag:
 def show_notification(text):
   os.system('osascript -e \'display notification "'+ text +'" with title "Mac Setup"\' > /dev/null')
   
-urllib2.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
+urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
 subprocess.call(shlex.split('./create-user.sh name "Welcome2tab!" ' + name.replace(' ', '')))
 
 
