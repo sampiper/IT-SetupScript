@@ -11,12 +11,19 @@ Open Terminal, type this and press enter:
 Follow the instructions that appear on the screen and you'll be ready to go.
 
 Software: 
+
 • Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
+
 • Essential Quicklook plugins 
+
 • Google Chrome 
+
 • Slack 
+
 • Zoom
+
 • Adobe Acrobat Reader 
+
 • Google Backup and Sync
 
 App Store apps: 
