@@ -12,9 +12,8 @@ Follow the instructions that appear on the screen and you'll be ready to go.
 
 Software: 
 
-• Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
-
-• Essential Quicklook plugins 
+..* Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
+..* Essential Quicklook plugins 
 
 • Google Chrome 
 
