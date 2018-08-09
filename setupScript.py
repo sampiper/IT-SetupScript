@@ -8,6 +8,7 @@ import subprocess
 
 name = ''
 email = ''
+assettag = ''
 
 
 # Check if Xcode Command Line Tools are installed
@@ -21,14 +22,17 @@ if os.system('xcode-select -p') != 0:
 
 
 # Sudo: Spectacle, ZSH, OSX Settings
-print "\n\nWelcome to the Mac Setup Script by Solstice\n"
+print "\n\nWelcome to the Mac Setup Script by TAB\n"
 
 # Basic Info
 while name == '':
-  name = raw_input("What's your name and surname?\n").strip()
+  name = raw_input("What's your name and surname?\n").strip().replace(' ', '')
 
 while email == '' or '@' not in email:
   email = raw_input("What's your email?\n").strip()
+  
+while assettag ==  '' or 'TABLT' not in assettag:
+  assettag = raw_input("Please enter the asset tag on the bottom of the laptop.\n").strip()
 
 
 def show_notification(text):
@@ -43,10 +47,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName "%s"' % name)
-os.system('sudo scutil --set HostName "%s"' % name)
-os.system('sudo scutil --set LocalHostName "%s"' % name.replace(' ', '-')) # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "%s"' % name)
+os.system('sudo scutil --set ComputerName ' + assettag + name)
+os.system('sudo scutil --set HostName ' + assettag + name)
+os.system('sudo scutil --set LocalHostName ' + assettag + name) # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + name)
 
 
 # Install Brew & Brew Cask
@@ -73,39 +77,26 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 
 # Installing third party apps
 print "Installing Essential Apps"
-os.system('brew cask install spectacle the-unarchiver')
-os.system('brew cask install google-chrome spotify slack zoomus adobe-acrobat-reader google-backup-and-sync')
-
+os.system('brew cask install google-chrome spotify slack zoomus google-backup-and-sync')
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
 
-# Finder: allow text selection in Quick Look
-os.system('defaults write com.apple.finder QLEnableTextSelection -bool true')
 # Check for software updates daily
 os.system('defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1')
-# Disable auto-correct
-#os.system('defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false')
 # Require password immediately after sleep or screen saver begins
 os.system('defaults write com.apple.screensaver askForPassword -int 1')
 os.system('defaults write com.apple.screensaver askForPasswordDelay -int 0')
 # Show the ~/Library folder
 os.system('chflags nohidden ~/Library')
-# Don’t automatically rearrange Spaces based on most recent use
-os.system('defaults write com.apple.dock mru-spaces -bool false')
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 os.system('defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true')
-
 
 # Make Google Chrome the default browser
 os.system('open -a "Google Chrome" --args --make-default-browser')
 
 # Clean Up
 os.system('brew cleanup && brew cask cleanup')
-
-# Mute startup sound
-show_notification("We need your password")
-os.system('sudo nvram SystemAudioVolume=%00')
 
 show_notification("All done! Enjoy your new macOS Thank you for joining Solstice ^^!")
 
