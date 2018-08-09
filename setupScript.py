@@ -47,10 +47,10 @@ print "*************************************"
 
 
 # Set computer name info (as done via System Preferences → Sharing)
-os.system('sudo scutil --set ComputerName ' + assettag + name)
-os.system('sudo scutil --set HostName ' + assettag + name)
-os.system('sudo scutil --set LocalHostName ' + assettag + name) # Doesn't support spaces
-os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + name)
+os.system('sudo scutil --set ComputerName ' + assettag + '-' + name)
+os.system('sudo scutil --set HostName ' + assettag + '-' + name)
+os.system('sudo scutil --set LocalHostName ' + assettag + '-' + name) # Doesn't support spaces
+os.system('sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string ' + assettag + '-' + name)
 
 
 # Install Brew & Brew Cask
