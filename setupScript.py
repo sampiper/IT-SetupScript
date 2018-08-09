@@ -28,8 +28,8 @@ print "\n\nWelcome to the Mac Setup Script by TAB\n"
 while name == '':
   name = raw_input("What's your name and surname?\n").strip()
 
-while email == '' or '@' not in email:
-  email = raw_input("What's your email?\n").strip()
+#while email == '' or '@' not in email:
+#  email = raw_input("What's your email?\n").strip()
   
 while assettag ==  '' or 'TABLT' not in assettag:
   assettag = raw_input("Please enter the asset tag on the bottom of the laptop.\n").strip()
@@ -78,7 +78,7 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 
 # Installing third party apps
 print "Installing Essential Apps"
-os.system('brew cask install google-chrome spotify slack zoomus google-backup-and-sync')
+os.system('brew cask install spotify slack zoomus google-backup-and-sync')
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
