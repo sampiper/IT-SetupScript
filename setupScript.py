@@ -40,11 +40,11 @@ while assettag ==  '' or 'TABLT' not in assettag:
 def show_notification(text):
   os.system('osascript -e \'display notification "'+ text +'" with title "Mac Setup"\' > /dev/null')
   
-urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
-os.system('chmod +x create-user.sh')
-subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
+#urllib.urlretrieve("https://raw.githubusercontent.com/sampiper/macos-create-user/master/create-user.sh", "create-user.sh")
+#os.system('chmod +x create-user.sh')
+#subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
 
-
+os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Welcome2tab!" -admin')
 
 print "Hi %s!" % name
 print "You'll be asked for your password at a few points in the process"
