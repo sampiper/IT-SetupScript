@@ -24,7 +24,7 @@ if os.system('xcode-select -p') != 0:
 
   
 # Download TAB files
-os.system('mkdir /Library/TAB')
+os.system('sudo mkdir /Library/TAB')
 # TAB icon
 urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB_600x600.png", "/Library/TAB/tab-icon.png")
 urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB15P.png", "/Library/TAB/tab-background.png")
