@@ -22,9 +22,19 @@ if os.system('xcode-select -p') != 0:
   print "**************************************************************"
   exit()
 
+  
+# Download TAB files
+os.system('mkdir /Library/TAB')
+# TAB icon
+urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB_600x600.png", "/Library/TAB/tab-icon.png")
+urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB15P.png", "/Library/TAB/tab-background.png")
+
+
 
 # Sudo: Spectacle, ZSH, OSX Settings
 print "\n\nWelcome to the Mac Setup Script by TAB\n"
+
+os.system('osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Library/TAB/tab-background.png"')
 
 # Basic Info
 while name == '':
@@ -44,9 +54,12 @@ def show_notification(text):
 #os.system('chmod +x create-user.sh')
 #subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
 
-urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB_600x600.png", "tab-icon.png")
 
+
+# Create user account
 os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Welcome2tab!" -admin -picture tab-icon.png')
+# Hide TAB Admin account
+os.system('sudo dscl . create /Users/tabadmin IsHidden 1')
 
 print "Hi %s!" % name
 print "You'll be asked for your password at a few points in the process"
