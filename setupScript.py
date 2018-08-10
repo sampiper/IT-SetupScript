@@ -34,7 +34,7 @@ urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/T
 # Sudo: Spectacle, ZSH, OSX Settings
 print "\n\nWelcome to the Mac Setup Script by TAB\n"
 
-os.system('osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Library/TAB/tab-background.png"')
+os.system('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "/Library/TAB/tab-background.png"\'')
 
 # Basic Info
 while name == '':
