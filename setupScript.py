@@ -87,7 +87,7 @@ os.system('brew cask install qlcolorcode qlmarkdown quicklook-csv quicklook-json
 
 # Installing third party apps
 print "Installing Essential Apps"
-os.system('brew cask install spotify slack zoomus google-backup-and-sync')
+os.system('brew cask install spotify slack zoomus google-backup-and-sync google-chrome')
 
 #Random OSX Settings
 print "Tweaking OSX Settings"
