@@ -44,7 +44,9 @@ def show_notification(text):
 #os.system('chmod +x create-user.sh')
 #subprocess.call(shlex.split('sudo ./create-user.sh "' + name + '" Welcome2tab! ' + name.replace(' ', '')))
 
-os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Welcome2tab!" -admin')
+urllib.urlretrieve("https://s3-eu-west-1.amazonaws.com/it-services/Backgrounds/TAB_600x600.png", "tab-icon.png")
+
+os.system('sysadminctl interactive -addUser ' + name.replace(' ', '').lower() + ' -fullName "' + name + '" -password "Welcome2tab!" -admin -picture tab-icon.png')
 
 print "Hi %s!" % name
 print "You'll be asked for your password at a few points in the process"
