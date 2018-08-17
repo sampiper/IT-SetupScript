@@ -1,4 +1,4 @@
-# IT-SetupScript
+# mac-deploy
 
 TAB Mac Setup
 
