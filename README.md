@@ -10,6 +10,12 @@ Open Terminal, type this and press enter:
 
 Follow the instructions that appear on the screen and you'll be ready to go.
 
+Configuration:
+* Creates user account (local admin)
+* Sets TAB logo profile pic
+* Sets desktop background
+* Sets network sharing name to TABLTxxxx-FirstnameLastname
+
 Software: 
 
 * Brew & Brew Cask with AutoUpdate Mas (Mac Apple Store) 
@@ -17,7 +23,6 @@ Software:
 * Google Chrome 
 * Slack 
 * Zoom
-* Adobe Acrobat Reader 
 * Google Backup and Sync
 
 App Store apps: 
